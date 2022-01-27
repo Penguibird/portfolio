@@ -1,0 +1,107 @@
+.projects {
+  &__row {
+    max-width: 90vw;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    // grid-template-rows: auto;
+    column-gap: 5rem;
+    margin-bottom: 15rem;
+    &:last-child {
+      padding-bottom: 5rem;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(tab-port) {
+      text-align: center;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-img-cont {
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      margin: 1rem;
+      grid-row: span 2;
+      transform: translateZ(-5px);
+      overflow: visible;
+    }
+    &-img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &-title {
+      grid-column: 2 / 3;
+      font-weight: 700;
+      font-size: 2.8rem;
+      margin-bottom: 0;
+      place-self: end start;
+      @include respond(tab-port) {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 1;
+        place-self: end center;
+      }
+      @include respond(phone) {
+        font-size: 2.4rem;
+      }
+      padding: 2rem 0 0;
+    }
+    &-content {
+      grid-column: 2 / 3;
+      padding: 0 0 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include respond(tab-port) {
+        grid-column: 1 / span 1;
+        align-items: center;
+      }
+      &-desc {
+        color: grey;
+        max-width: 60rem;
+        margin-bottom: 0.8rem;
+        margin-top: 1em;
+        // @include respond(phone) {
+        //   font-size: 1.7rem;
+        // }
+      }
+      &-button {
+        margin: 2rem 0 0 0;
+      }
+      &-tech {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        & > li + li {
+          margin-left: 1em;
+        }
+        &-svg {
+          height: 2em;
+          width: auto;
+          max-width: 3em;
+          &.html {
+            height: 2.2em;
+          }
+          &.react {
+            height: 2.5em;
+          }
+        }
+      }
+    }
+  }
+}
