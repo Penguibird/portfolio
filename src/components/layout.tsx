@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import Navbar from "./Navbar"
+import Navbar from "./navbar"
 import "../styles/mains.scss"
 
 import { polyfill } from 'css-typed-om';

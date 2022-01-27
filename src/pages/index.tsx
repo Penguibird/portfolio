@@ -4,11 +4,11 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 // Components
 import Hero from "../components/hero"
-import Work from "../components/Work"
+import Work from "../components/work"
 import About from "../components/about"
 import Skills from "../components/skills"
-import Promotion from "../components/Promotion"
-import Footer from "../components/Footer"
+// import Promotion from "../components/Promotion"
+import Footer from "../components/footer"
 import polyfill from '../utils/scroll-timeline'
 const isBrowser = typeof window !== "undefined"
 
