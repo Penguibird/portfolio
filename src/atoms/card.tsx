@@ -3,6 +3,36 @@ import Project, { Tech } from "../types/Project"
 import Fade from "react-reveal/Fade"
 import { Link } from "gatsby";
 
+import csharp from '../images/tech/c#.svg';
+import code from '../images/tech/code.svg';
+import css from '../images/tech/css.svg';
+import design from '../images/tech/design.svg';
+import gatsby from '../images/tech/gatsby.svg';
+import handlebars from '../images/tech/handlebars.svg';
+import html from '../images/tech/html.svg';
+import javascript from '../images/tech/javascript.svg';
+import mongodb from '../images/tech/mongodb.svg';
+import mongodbreact from '../images/tech/mongodbreact.svg';
+import sass from '../images/tech/sass.svg';
+import sql from '../images/tech/sql.svg';
+import typescript from '../images/tech/typescript.svg';
+
+const techIcons = {
+  'c#': csharp,
+  code
+  , css
+  , design
+  , gatsby
+  , handlebars
+  , html
+  , javascript
+  , mongodb
+  , mongodbreact
+  , sass
+  , sql
+  , typescript
+}
+
 const Card = ({ project }: { project: Project }) => {
   const {
     img,
@@ -64,7 +94,7 @@ const Card = ({ project }: { project: Project }) => {
               >
                 <img
                   className={`projects__row-content-tech-svg ${t.toLowerCase()}`}
-                  src={require(`../images/tech/${t.toLowerCase()}.svg`)}
+                  src={techIcons[t]}
                   alt={t}
                 />
               </li>
