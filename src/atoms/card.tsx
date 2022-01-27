@@ -2,35 +2,34 @@ import React, { ReactChild } from "react"
 import Project, { Tech } from "../types/Project"
 import Fade from "react-reveal/Fade"
 import { Link } from "gatsby";
+// declare module "*.svg" {
+//   const value: string;
+//   export = value;
+// }
+import * as techIcons from '../images/techComponents';
 
-import csharp from '../images/tech/c#.svg';
-import code from '../images/tech/code.svg';
-import css from '../images/tech/css.svg';
-import design from '../images/tech/design.svg';
-import gatsby from '../images/tech/gatsby.svg';
-import handlebars from '../images/tech/handlebars.svg';
-import html from '../images/tech/html.svg';
-import javascript from '../images/tech/javascript.svg';
-import mongodb from '../images/tech/mongodb.svg';
-import react from '../images/tech/react.svg';
-import sass from '../images/tech/sass.svg';
-import sql from '../images/tech/sql.svg';
-import typescript from '../images/tech/typescript.svg';
+// const techIcons = {
+//   'c#': csharp,
+//   code
+//   , css
+//   , design
+//   , gatsby
+//   , handlebars
+//   , html
+//   , javascript
+//   , mongodb
+//   , mongodbreact
+//   , sass
+//   , sql
+//   , typescript
+// }
 
-const techIcons = {
-  'c#': csharp,
-  code
-  , css
-  , design
-  , gatsby
-  , handlebars
-  , html
-  , javascript
-  , mongodb
-  , react
-  , sass
-  , sql
-  , typescript
+const getKey = (s: string) => {
+  if (s == "c#") return "Csharp"
+  const small = s.toLowerCase();
+  let arr = s.split("");
+  arr[0] = arr[0].toUpperCase();
+  return arr.join("");
 }
 
 const Card = ({ project }: { project: Project }) => {
@@ -92,11 +91,12 @@ const Card = ({ project }: { project: Project }) => {
                 aria-label={t}
                 data-balloon-pos="down"
               >
-                <img
+                {/* <img
                   className={`projects__row-content-tech-svg ${t.toLowerCase()}`}
                   src={techIcons[t]}
                   alt={t}
-                />
+                /> */}
+                {techIcons[getKey(t)]}
               </li>
             )
           }
