@@ -51,7 +51,7 @@ const About = () => {
           <div className="image-wrapper" ref={img}>
             <StaticImage loading="eager" formats={["auto", "avif", "webp"]} className='img' src="../images/aboutMe.jpeg" alt='' layout='constrained' placeholder='blurred' />
           </div>
-        </div>p
+        </div>
       </div>
     </div>
   )
