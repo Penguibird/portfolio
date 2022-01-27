@@ -12,7 +12,7 @@ import handlebars from '../images/tech/handlebars.svg';
 import html from '../images/tech/html.svg';
 import javascript from '../images/tech/javascript.svg';
 import mongodb from '../images/tech/mongodb.svg';
-import mongodbreact from '../images/tech/mongodbreact.svg';
+import react from '../images/tech/react.svg';
 import sass from '../images/tech/sass.svg';
 import sql from '../images/tech/sql.svg';
 import typescript from '../images/tech/typescript.svg';
@@ -27,7 +27,7 @@ const techIcons = {
   , html
   , javascript
   , mongodb
-  , mongodbreact
+  , react
   , sass
   , sql
   , typescript
