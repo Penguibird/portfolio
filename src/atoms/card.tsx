@@ -8,29 +8,22 @@ import { Link } from "gatsby";
 // }
 import * as techIcons from '../images/techComponents';
 
-// const techIcons = {
-//   'c#': csharp,
-//   code
-//   , css
-//   , design
-//   , gatsby
-//   , handlebars
-//   , html
-//   , javascript
-//   , mongodb
-//   , mongodbreact
-//   , sass
-//   , sql
-//   , typescript
-// }
-
-const getKey = (s: string) => {
-  if (s == "c#") return "Csharp"
-  const small = s.toLowerCase();
-  let arr = s.split("");
-  arr[0] = arr[0].toUpperCase();
-  return arr.join("");
+const vb = {
+  'c#': "0 0 750 843",
+  code: "0 0 24 24",
+  css: "0 0 470 470",
+  design: "0 0 24 24",
+  gatsby: "0 0 2500 2500",
+  handlebars: "0 0 2500 605",
+  html: "0 0 611 611",
+  javascript: "0 0 2500 2500",
+  mongodb: "0 0 72 154",
+  react: "0 0 519 488",
+  sass: "0 0 1508 1131",
+  sql: "0 0 2500 2461",
+  typescript: "0 0 2500 2500",
 }
+
 
 const Card = ({ project }: { project: Project }) => {
   const {
@@ -96,7 +89,15 @@ const Card = ({ project }: { project: Project }) => {
                   src={techIcons[t]}
                   alt={t}
                 /> */}
-                {techIcons[getKey(t)]}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className={`projects__row-content-tech-svg ${t.toLowerCase()}`}
+                  viewBox={vb[t.toLowerCase()]}
+                  width={24}
+                  height={24}
+                >
+                  <use href={`#${t.toLowerCase()}`} />
+                </svg>
               </li>
             )
           }
