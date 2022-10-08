@@ -1,12 +1,12 @@
 import React from "react"
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
 
 const Footer = () => {
   return (
     <div className="section" id="contact">
       <div className="container">
         <div className="footer-container">
-          <Fade bottom cascade>
+          <Fade triggerOnce direction="up" cascade>
             <h1>Contact</h1>
           </Fade>
           <p>Get in touch, either through email or social media.</p>

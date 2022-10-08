@@ -1,6 +1,6 @@
 import React, { ReactChild } from "react"
 import Project, { Tech } from "../types/Project"
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
 import { Link } from "gatsby";
 // declare module "*.svg" {
 //   const value: string;
@@ -65,13 +65,13 @@ const Card = ({ project }: { project: Project }) => {
       <div className="projects__row-img-cont" ref={imgRef}>
         {img}
       </div>
-      <Fade bottom>
+      <Fade triggerOnce direction="up">
         <h3 className="projects__row-title">
           {heading}
         </h3>
       </Fade>
       <div className="projects__row-content">
-        <Fade bottom>
+        <Fade triggerOnce direction="up">
           <p className="projects__row-content-desc">
             {paragraph}
           </p>

@@ -13,7 +13,7 @@
     @include respond(tab-port) {
       grid-template-columns: 1fr;
       grid-gap: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 10rem;
     }
 
     @include respond(tab-port) {

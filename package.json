@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
     "css-typed-om": "^0.4.0",
     "gatsby": "^4.6.0",
     "gatsby-plugin-google-analytics": "^4.6.0",
@@ -28,6 +29,7 @@
     "gatsby-source-filesystem": "^4.6.0",
     "gatsby-transformer-sharp": "^4.6.0",
     "react": "^17.0.1",
+    "react-awesome-reveal": "^4.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-reveal": "^1.2.2",

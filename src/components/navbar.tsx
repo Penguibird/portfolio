@@ -1,12 +1,11 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import '../utils/scroll-timeline.js';
-import { animation } from "react-reveal/globals";
 
 const Navbar = () => {
 
   // const offset = '200px'
-  const navbar = React.useRef<HTMLDivElement>();
+  const navbar = React.useRef<HTMLDivElement | null>(null);
   React.useEffect(() => {
     const height = window.innerHeight
     if (!navbar.current) return;

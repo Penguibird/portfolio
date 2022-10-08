@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "../atoms/card"
-import Fade from "react-reveal/Fade"
+import { Fade } from "react-awesome-reveal"
 
 // import data from "../yourdata"
 import projects from "../content/projects"
@@ -10,21 +10,26 @@ const Work = () => {
     <div className="section" id="work">
       <div className="container">
         <div className="work-wrapper">
-          <Fade bottom>
+          <Fade triggerOnce direction="down">
             <h1>Work</h1>
           </Fade>
           <SpriteSheet />
-          <Fade bottom cascade>
-            <div className="projects__content">
+          <div className="projects__content">
 
-              {projects.map((project, index) => (
-                <Card
-                  key={index}
-                  project={project}
-                />
-              ))}
-            </div>
-          </Fade>
+            {projects.map((project, index) => (
+              <Card
+                key={index}
+                project={project}
+              />
+              // <Fade triggerOnce direction="up" cascade >
+              //   <Card
+              //     key={index}
+              //     project={project}
+              //   />
+
+              // </Fade>
+            ))}
+          </div>
         </div>
       </div>
     </div >
