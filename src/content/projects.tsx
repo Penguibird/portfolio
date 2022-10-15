@@ -5,6 +5,15 @@ import { Tech } from '../types/Project';
 
 export default [
     {
+        title: 'GolferisCZ',
+        img: <StaticImage className='img drop-shadow' src="../images/portfolio/golferis_recepce.png" alt='' layout='constrained' placeholder='blurred' />,
+        text: "In February of 2022 I joined a czech company developing a suite of sotware solutions for golf resorts. I worked as the lead frontend developer on the teetime reservation system (pictured), cash register software as well as other smaller features.",
+        url: "https://range.golferis.cz/rezervace",
+        isInternalUrl: false,
+        // isInternalUrl: true,
+        tech: ['HTML', 'CSS', 'typescript', 'React', ]
+    },
+    {
         title: "Trippi",
         text: "An app for reporting work trip expenses developped for TietoEVRY. Trippi replaced their old paper system and is used by over 2 700 employees of the Czech branch of TietoEVRY as the primary way to report expenses.",
         img: <StaticImage className='img drop-shadow' src="../images/portfolio/trippi.png" alt='' layout='constrained' placeholder='blurred' />,
